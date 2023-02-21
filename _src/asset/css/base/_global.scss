@@ -1,0 +1,110 @@
+
+
+/*#########################################################
+
+アニメーション
+
+#########################################################*/
+@keyframes fade{
+	0%{opacity:0}
+	100%{opacity:1}
+}
+
+/*#########################################################
+
+共通アイコン・共通設定
+
+#########################################################*/
+/* ========================================================
+矢印
+=========================================================*/
+/*
+$arrow-width: 1px;
+%arrow-o-before{
+	width: $arrow-len;
+	height: $arrow-len;
+	border-top: $arrow-width solid #000;
+	border-right: $arrow-width solid #000;
+}
+%arrow-after{
+	width: $arrow-len;
+	height: $arrow-len;
+	border-top: $arrow-width solid #000;
+	border-right: $arrow-width solid #000;
+}
+.arrow {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	text-indent: -10000px;
+	width: $arrow-len;
+	height: $arrow-len;
+	&::after,
+	&::before {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		content: "";
+		margin: auto;
+		vertical-align: middle;
+	}
+	// 上下オープン矢印
+	&.-opendown::before,
+	&.-openup::before {
+		@extend %arrow-o-before;
+		transform: rotate(-45deg);
+	}
+	&.-opendown::before{
+		transform: rotate(135deg);
+	}
+	// 左右オープン矢印
+	&.-openleft::before,
+	&.-openright::before {
+		@extend %arrow-o-before;
+		transform: rotate(45deg);
+	}
+	&.-openleft::before{
+		transform: rotate(-135deg);
+	}
+
+	// 上下矢印
+	&.-up,
+	&.-down{
+		width: $arrow-len;
+		&::before{
+			right: 0;
+			width: $arrow-width;
+			height: $arrow-len;
+			background: #000;
+		}
+		&::after{
+			@extend %arrow-after;
+			transform: rotate(-45deg);
+		}
+	}
+	&.-down{
+		&::after{
+			transform: rotate(135deg);
+		}
+	}
+
+	// 左右矢印
+	&.-left,
+	&.-right{
+		&::before{
+			width: $arrow-len;
+			height: $arrow-width;
+			background: #000;
+		}
+		&::after{
+			@extend %arrow-after;
+			transform: rotate(45deg);
+		}
+	}
+	&.-left::after{
+		transform: rotate(-135deg);
+	}
+}
+*/

@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+
+/*#########################################################
+
+【コーディングガイドライン補足】
+
+▼サポートブラウザ
+確認ブラウザ：
+▼スマートフォン
+確認デバイス：
+▼解像度
+基準モニター解像度（PC）：
+基準モニター解像度（SP）：
+ブレイクポイント：
+
+▼コーディングガイドライン
+・コーディングはPUG、CSSはSASS、Bootstrap準拠
+・CSS設計手法はRSCSS
+・リンクURL：ルート相対。index.htmlは記入しない
+・外部サイトへのリンクは基本的に新規ウインドウ（_blank）での展開
+・IDはJSのみで使い、スタイルはクラスで指定する
+・フォントはremの62.50%（10px）
+・articleの中にsectionを入れる、その逆はNG
+
+▼ベースSCSS
+・base/_base.scss
+　→他のプロジェクトでも使う汎用的な設定
+　他プロジェクトでも絶対に使うというレベルでなくても良い。
+・base/_generic.scss
+　→変数やmixinなどの設定
+・base/_global.scss
+　→汎用的に使うクラス（主にElements）
+
+#########################################################*/
+
+// Bootstrap用CSS
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+
+
+
+/*#########################################################
+
+読み込み
+
+#########################################################*/
+
+// 変数・mixin
+@import "base/generic.scss";
+// タグのデフォルト
+@import "base/base.scss";
+// よく使うグローバルなElements集
+@import "base/global.scss";
+
+/* ========================================================
+外部スタイル
+=========================================================*/
+
+/* ========================================================
+JSライブラリ用
+=========================================================*/
+
+/* ========================================================
+Components
+=========================================================*/
+// サイトのヘッダ
+// @import "components/site-header.scss";
+// サイトのフッタ
+// @import "components/site-footer.scss";
+
+/*
+これ以降からHelpersの上部の間に読み込みたいコンポーネントを追加
+*/
+
+// Helpers
+@import "_helpers.scss";
+
+
+/*#########################################################
+
+サンプル用CSS
+
+#########################################################*/
+main{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.bd-example, .bd-example-row-flex-cols {
+    position: relative;
+    padding: 1.5rem;
+    margin: 1rem 0 3rem;
+    border: solid 0.2rem #f8f9fa;
+	.row{
+		background-color: rgba(86,61,124,.15);
+		line-height: 2;
+	}
+	.col, .row>[class^=col-] {
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+		background-color: rgba(86,61,124,.15);
+		border: 1px solid rgba(86,61,124,.2);
+	}
+}
+.bd-example-row-flex-cols .row {
+	margin-bottom: 1rem;
+    min-height: 10rem;
+    background-color: rgba(255,0,0,.1);
+}
+
+
+
+/*#########################################################
+
+共通パーツ
+
+#########################################################*/

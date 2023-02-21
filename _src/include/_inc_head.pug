@@ -1,0 +1,44 @@
+//- #########################################################
+
+	ファイル概要：HEAD要素用ファイル
+
+	#########################################################
+
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+//- タイトルとキーワード、デスクリプション
+title #{page.title} - #{site_name}
+if page.description != ""
+	meta(content=page.description, name="description")
+if page.keywords != ""
+	meta(content=page.keywords, name="keywords")
+
+//- OGP
+meta(content=site_name, property="og:site_name")
+meta(content=page.title, property="og:title")
+meta(content=page.description, property="og:description")
+meta(content=(key == "top" ? "website" : "article"), property="og:type")
+meta(content="https://" + domain + page.url, property="og:url")
+meta(content="https://" + domain + page.image, property="og:image")
+meta(content="ja_JP", property="og:locale")
+//- Facebook-App-ID：
+if page.fbappid != ""
+	meta(content="fb:app_id", property=page.fbappid)
+//- Facebook-Facebookの個人アカウントにリレーションしているID：
+if page.fbadmins != ""
+	meta(content="fb:admins", property=page.fbadmins)
+//- Twitterカード-カードの種類：summary/summary_large_image/photo/gallery/app
+if page.twcard != ""
+	meta(name="twitter:card", content=page.twcard)
+//- Twitterカード-Twitterユーザ名：@ユーザー名
+if page.twsite != ""
+	meta(name="twitter:site", content=page.twsite)
+
+//- favicon
+link(rel="icon" href="/favicon.ico")
+//- link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+
+//- CSSの読み込み
+link(rel="stylesheet", href=css_path+"/"+cssfile)

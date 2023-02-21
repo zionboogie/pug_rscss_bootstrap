@@ -1,0 +1,21 @@
+# 不要ファイル
+*.swp
+*~
+
+# Windowsの不要ファイル
+Thumbs.db
+.DS_Store
+
+# Preprosなどコンパイル系
+.sass-cache
+prepros*.config
+
+# Visual Studio Code
+.project
+.vscode
+.editorconfig
+
+# 出力系ファイル
+*.css
+*.html
+*.map

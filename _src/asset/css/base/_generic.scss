@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+
+/*#########################################################
+
+基本設定
+
+#########################################################*/
+
+/* ========================================================
+単位用設定
+=========================================================*/
+// 基本単位
+$unit: 1rem; // フォントサイズ
+$font-size: $unit*1.6; // 16px
+
+/* ========================================================
+色用設定
+=========================================================*/
+// カラー
+$c-bg: #fff;	// 背景色
+$c-text: #1b1b1b;	// フォントカラー
+$c-line: #959595;	// 線の色
+$c-anchor: #000;	// リンク色
+$c-anchor-hover: #959595;	// ホバー時のリンク色
+$c-anchor-active: #00a0e9; // アクティブ時のリンク色
+$c-anchor-visited: $c-anchor; // 訪問済み時のリンク色
+$c-anchor-focus: $c-anchor-hover; // フォーカス時のリンク色
+
+
+/* ========================================================
+フォント用設定
+=========================================================*/
+// フォント（import無し）
+$font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Helvetica Neue", Helvetica, Arial, "メイリオ", Meiryo, sans-serif;
+
+// フォント（Google Fonts）
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+// font-family: "Noto Sans JP","ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","Helvetica Neue",Helvetica,Arial,"メイリオ",Meiryo,sans-serif

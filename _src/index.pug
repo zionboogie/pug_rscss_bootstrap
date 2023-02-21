@@ -1,0 +1,147 @@
+//- #########################################################
+
+	ファイル概要：テンプレートファイル
+
+	#########################################################
+
+//- サイト共通レイアウトファイルを継承
+extends _layout.pug
+
+//- _layout.pugのvarsを再定義
+block vars
+	//- サイト全体の設定ファイルの読み込み
+	include _config.pug
+	//- ページ用変数を設定
+	-
+		//- ページID
+		var id = "index"
+		//- ページ設定
+		var page = {
+			url : "/" + id + '.html',
+			title : '',
+			description : '',
+			keywords : '',
+			image : image_path + '/ogp.jpg',
+			//- Facebook-App-ID：
+			fbappid : '',
+			//- Facebook-Facebookの個人アカウントにリレーションしているID（必要なければ設定しない）：
+			fbadmins : '',
+			//- Twitterカード-カードの種類：summary/summary_large_image/photo/gallery/app
+			twcard : 'summary_large_image',
+			//- Twitterカード-Twitterユーザ名：@ユーザー名
+			twsite : ''
+		}
+		//- CSSファイル名
+		var cssfile = 'style.css'
+		//- JSファイル名
+		var jsfile = id + '.js'
+		//- Bootstrap用JS
+		var jsbsfile = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+
+//- _layout.pugのcontentsを再定義
+block contents
+	main.container-fluid
+		.row.flex-xl-nowrap
+			.col-12.col-md-3.col-xl-2
+				div test
+			.d-none.d-xl-block.col-xl-2
+				div test
+
+			.col-12.col-md-9.col-xl-8.py-md-3.pl-md-5.bd-content
+				h1 Bootstrap
+				h2 Grid system
+
+				h3 均等横並び
+				.bd-example
+					article.container
+						.row
+							.col-sm One of three columns
+							.col-sm One of three columns
+						.row
+							.col-sm One of three columns
+							.col-sm One of three columns
+							.col-sm One of three columns
+
+				h3 任意の1列の幅を設定
+				.bd-example
+					article.container
+						.row
+							.col 1 of 3
+							.col-6 2 of 3
+							.col 3 of 3
+						.row
+							.col 1 of 3
+							.col-5 2 of 3
+							.col 3 of 3
+
+				h3 コンテンツの自然な幅に基づいて列のサイズを設定
+				.bd-example
+					article.container
+						.row.justify-content-md-center
+							.col.col-lg-2 1 of 3
+							.col-md-auto Variable width content
+							.col.col-lg-2 3 of 3
+
+				h3 .w-100 数の行にまたがる等幅の列を作成、ブレークポイントにもできる
+				.bd-example
+					article.container
+						.row
+							.col col
+							.col col
+							.w-100 col
+							.col col
+							.col col
+
+				h3 複数のクラスを組みわせる
+				.bd-example
+					article.container
+						.row
+							.col-12.col-md-8 .col-12 .col-md-8
+							.col-6.col-md-4 .col-6 .col-md-4
+						.row
+							.col-6.col-md-4 .col-6 .col-md-4
+							.col-6.col-md-4 .col-6 .col-md-4
+							.col-6.col-md-4 .col-6 .col-md-4
+						.row
+							.col-6 .col-6
+							.col-6 .col-6
+
+				h3 マイナスマージン
+				.bd-example
+					article.container
+						.row.mx-lg-n5
+							.col.py-3.px-lg-5.border.bg-light Custom column padding
+							.col.py-3.px-lg-5.border.bg-light Custom column padding
+
+				h3 縦と横の列を整列
+				.bd-example-row.bd-example-row-flex-cols
+					article.container
+						.row.align-items-start
+							.col
+								| One of three columns
+							.col
+								| One of three columns
+							.col
+								| One of three columns
+						.row.align-items-center
+							.col
+								| One of three columns
+							.col
+								| One of three columns
+							.col
+								| One of three columns
+						.row.align-items-end
+							.col
+								| One of three columns
+							.col
+								| One of three columns
+							.col
+								| One of three columns
+					article.container
+						.row
+							.col.align-self-start
+								| One of three columns
+							.col.align-self-center
+								| One of three columns
+							.col.align-self-end
+								| One of three columns
